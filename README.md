@@ -25,9 +25,17 @@ SearchBar Header
 • 
 
 Body:
-•  Code container, row, column markup
-• Create 
-• 
+• Code container, row, column markup
+• HTML shell for hotels (Image, Name, Blurb, Star Rating, Price, Wifi, Pool, More Info)
+• Hard code hotel info for NYC
+• Hard code hotel info for Chicago
+• Hard code hotel info for LA
+• Modal code for more info
+
+
+Hotel Info:
+• Image
+
 
 Footer:
 • Code Footer Stub
