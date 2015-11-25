@@ -1,4 +1,18 @@
-.test{
-  height:400px;
-  border:1px solid black;
-}
+/* ----------------------------------
+    Carousle
+-----------------------------------*/
+  #myCarousel .item { 
+    height: 400px;  
+  }
+
+  #slide1 {
+    background: url('../images/nyc_callout.jpg') top center no-repeat;
+  }
+  
+  #slide2 {
+    background: url('../images/chicago_callout.jpg') top center no-repeat;
+  }
+  
+  #slide3 {
+    background: url('../images/la_callout.jpg') top center no-repeat;
+  }
