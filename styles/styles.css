@@ -16,3 +16,15 @@
   #slide3 {
     background: url('../images/la_callout.jpg') top center no-repeat;
   }
+
+  .carousel-button {
+    position: absolute;
+    right: 250px;
+    top: 330px;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 0px;
+    background-color:rgba(0,0,0,0.2);
+    font-size: 24px;
+    font-weight: bold;
+  }
