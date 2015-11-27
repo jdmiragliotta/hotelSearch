@@ -1,3 +1,13 @@
+
+/* ----------------------------------
+    Global
+-----------------------------------*/
+  body{
+    font-family:  'Raleway', sans-serif;
+  }
+
+
+
 /* ----------------------------------
     NavBar
 -----------------------------------*/
@@ -73,7 +83,63 @@
 /* ----------------------------------
     Result Panels
 -----------------------------------*/
+  .panel {
+    margin-top: 20px;
+    max-height: 280px;
+  }
 
-  .resultsImg {
-    width: 155px;
+  .panel-default>.panel-heading{
+    background-color: #0A138F;
+    color: #fff;
+  }
+
+  .panel-heading{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #0A138F;
+    color: #fff;
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 0px;
+    padding-top: 10px;
+  }
+
+  .feature{
+    padding-right: 5px;
+  }
+
+  .hook{
+    padding-top: 10px;
+  }
+
+  .address {
+    padding-bottom: 10px;
+  }
+  
+
+  .price{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+
+  .pernight{
+    font-size: 15px;
+  }
+
+  .btn-price{
+    background-color: #0A138F;
+    color: #fff;
+    margin-top: 95px;
+    font-size: 15px;
+
+  }
+
+  .thumbnail{
+    margin-right: 10px;
+    margin-bottom: 0px;
+    height:170px;
+    width: 100%;
   }
