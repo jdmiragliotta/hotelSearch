@@ -64,8 +64,9 @@
     height: 1px;
     width: 300px;
     background: #fff;
-    background-image: linear-gradient(to right, #2f4f4f, #fff, #2f4f4f);
-    margin-top: 5px;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.76) 39%, rgba(255,255,255,1) 51%, rgba(255,255,255,0.74) 64%, rgba(255,255,255,0.01) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.76) 39%,rgba(255,255,255,1) 51%,rgba(255,255,255,0.74) 64%,rgba(255,255,255,0.01) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.76) 39%,rgba(255,255,255,1) 51%,rgba(255,255,255,0.74) 64%,rgba(255,255,255,0.01) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */    margin-top: 5px;
     margin-bottom: 0px;
 }
 
