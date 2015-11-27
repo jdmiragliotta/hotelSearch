@@ -38,15 +38,32 @@
     font-size: 24px;
     
   }
+    .city {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 25px;
+
+    }
 
   .callout {
     font-family: 'Raleway', sans-serif;
     color: white;
-    font-size: 40px;
-
+    font-size: 30px;
     text-align: center;
-    padding-top: 25px
+    padding-top: 15px
   }
+
+ hr {
+    border: 0;
+    height: 1px;
+    width: 300px;
+    background: #fff;
+    background-image: linear-gradient(to right, #2f4f4f, #fff, #2f4f4f);
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
 
 /* ----------------------------------
     Result Panels
