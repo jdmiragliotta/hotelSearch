@@ -1,3 +1,13 @@
+
+/* ----------------------------------
+    Global
+-----------------------------------*/
+  body{
+    font-family:  'Raleway', sans-serif;
+  }
+
+
+
 /* ----------------------------------
     NavBar
 -----------------------------------*/
@@ -31,15 +41,13 @@
   }
 
   .carousel-button {
-    position: absolute;
-    right: 250px;
-    top: 330px;
+    margin-top: 15px;
     color: #fff;
-    border: 3px solid #fff;
+    border: 1px solid #fff;
     border-radius: 0px;
     background-color:rgba(0,0,0,0.2);
     font-family: 'Raleway', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     
   }
     .city {
@@ -73,7 +81,64 @@
 /* ----------------------------------
     Result Panels
 -----------------------------------*/
+  .panel {
+    margin-top: 20px;
+    max-height: 280px;
+  }
 
-  .resultsImg {
-    width: 155px;
+  .panel-default>.panel-heading{
+    background-color: #0A138F;
+    color: #fff;
+  }
+
+  .panel-heading{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #0A138F;
+    color: #fff;
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 0px;
+    padding-top: 10px;
+  }
+
+  .feature{
+    padding-right: 5px;
+  }
+
+  .hook{
+    padding-top: 10px;
+  }
+
+  .address {
+    padding-bottom: 10px;
+  }
+  
+
+  .price{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5px;
+    color: green  ;
+  }
+
+  .pernight{
+    font-size: 15px;
+  }
+
+  .btn-price{
+    background-color: #0A138F;
+    color: #fff;
+    margin-top: 95px;
+    font-size: 15px;
+
+  }
+
+  .thumbnail{
+    margin-right: 10px;
+    margin-bottom: 0px;
+    height:170px;
+    width: 100%;
   }
