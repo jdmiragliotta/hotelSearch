@@ -5,7 +5,6 @@ $(document).ready(function(){
   });
 
 
-
   $("#submit").on('click', function(){
     $(".results").each(function(){
       if($("#search").val() === "nyc"){
@@ -43,22 +42,21 @@ $(document).ready(function(){
   });
 
   $(".starsFilter").on('click', function(){
-    if($(this).attr('value') === '1'){
-      console.log($("#star").siblings());
-    }
-    if($(this).attr('value') === '2'){
-      
-    }
-    if($(this).attr('value') === '3'){
-      
-    }
-    if($(this).attr('value') === '4'){
-      
-    }
-    if($(this).attr('value') === '5'){
-      
-    }
-  })
+    var numStars = $(this).attr('value');//Value of Radio Button
+    var check = 0
+    $('.stars').children('span').each(function(){//going through phyphicon Spans
+      if($(this).hasClass('glyphicon-star')){
+        check++;//If star, add 1
+      }
+    });
+    $(".results").each(function(){
+      check = parseInt(check);//Force both to ints
+      numStars = parseInt(numStars);      
+      if(check !== numStars){ //If they are not equal, hide the result
+        $(this).hide();
+      }
+    });
+  });
 
 
 
