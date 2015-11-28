@@ -42,6 +42,23 @@ $(document).ready(function(){
     });
   });
 
+  $(".starsFilter").on('click', function(){
+    if($(this).attr('value') === '1'){
+      console.log($("#star").siblings());
+    }
+    if($(this).attr('value') === '2'){
+      
+    }
+    if($(this).attr('value') === '3'){
+      
+    }
+    if($(this).attr('value') === '4'){
+      
+    }
+    if($(this).attr('value') === '5'){
+      
+    }
+  })
 
 
 
