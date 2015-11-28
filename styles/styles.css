@@ -6,6 +6,10 @@
     font-family:  'Raleway', sans-serif;
   }
 
+  ul {
+    list-style: none;
+  }
+
 
 
 /* ----------------------------------
@@ -32,8 +36,8 @@
   } 
 
   .tagline{
-    font-size: 20px;
-    margin-left: 10px;
+    font-size: 15px;
+    margin-left: 15px;
   }
 
 
@@ -127,18 +131,18 @@
   }
 
   .panel-default>.panel-heading{
-    background-color: #0A138F;
+    background-color: #060A49;
     color: #fff;
   }
 
   .panel-heading{
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #0A138F;
+    background-color: #060A49;
     color: #fff;
   }
 
-  .panel-feature{
+  .panel-features{
     list-style: none;
     padding-left: 0px;
     padding-top: 10px;
@@ -169,7 +173,7 @@
   }
 
   .btn-price{
-    background-color: #0A138F;
+    background-color: #060A49;
     color: #fff;
     margin-top: 95px;
     font-size: 15px;
