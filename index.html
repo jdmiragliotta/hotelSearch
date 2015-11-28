@@ -143,6 +143,27 @@
     </a>
   </div>
 
+<!-- Modal Shell -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Hotel Name</h4>
+      </div>
+      <div class="modal-body">
+        <small>Hotel Address and Number</small>
+        <img class="resultsImg thumbnail" src="images/hotel/placeholder.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+        <button type="button" class="btn btn-primary">Book This Hotel</button>
+      </div>
+    </div>
+  </div>
+</div>
   
 
 
@@ -188,7 +209,7 @@
                 <div class="col-md-3"><!--Results/price-->
                   <div class="cost pull-right">
                   <p class="pernight">Nightly Cost:<span class="price">$300</span></p>
-                  <button class="btn btn-price pull-right">Continue</button>
+                  <button class="btn btn-price pull-right" data-toggle="modal" data-target="#myModal">Continue</button>
                 </div>
               </div> 
 
