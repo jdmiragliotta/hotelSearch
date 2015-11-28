@@ -21,47 +21,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Stay The Night</a>
+        <div class="navbar-brand">Stay The Night<span class="tagline">Any City. Any Night.</span></div>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
+        
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" id="search"placeholder="Search">
-            <input type="text" class="form-control datePicker" placeholder="Start">
-            <input type="text" class="form-control datePicker" placeholder="End">
+            <input type="text" class="form-control" id="search"placeholder="Destination">
+            <input type="text" class="form-control datePicker" placeholder="Check In">
+            <input type="text" class="form-control datePicker" placeholder="Check Out">
           </div>
-          <button type="submit" class="btn btn-default" id="submit">Submit</button>
+          <button type="submit" class="btn btn-default" id="submit">Search</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Sign Up</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -244,6 +220,38 @@
             <span class="glyphicon glyphicon-star"></span>
             <br>
         </form>
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Price Range
+          </div>
+          <div class="panel-body">
+             <ul> 
+                <li><input type="checkbox" autocomplete="off"> Under $100</li>
+                <li><input type="checkbox" autocomplete="off"> $100 to $200</li>
+                <li><input type="checkbox" autocomplete="off"> Above $300</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Must Haves
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li><input type="radio" name="options" id="option1" autocomplete="off"> WiFi</li>
+              <li><input type="radio" name="options" id="option2" autocomplete="off"> Restaurant/Bar</li>
+              <li><input type="radio" name="options" id="option3" autocomplete="off"> Valet Parking</li>
+              <li><input type="radio" name="options" id="option4" autocomplete="off"> Fitness Center</li>
+              <li><input type="radio" name="options" id="option5" autocomplete="off"> Rooftop Terrace</li>
+              <li><input type="radio" name="options" id="option6" autocomplete="off"> Childcare</li>
+              <li><input type="radio" name="options" id="option7" autocomplete="off"> Spa Service</li>
+              <li><input type="radio" name="options" id="option8" autocomplete="off"> Pool</li>
+            </ul>
+          </div>
+        </div>
+     
       </div>
 
       <div class="col-md-9"><!--Results-->
@@ -269,7 +277,7 @@
                   <span class="glyphicon glyphicon-star"></span>
                   <span class="glyphicon glyphicon-star"></span>
 
-                  <ul>
+                  <ul class="panel-features">
                     <li><span class="glyphicon glyphicon-heart feature" aria-hidden="true"></span>Feature Amenity</li>
                     <li><span class="glyphicon glyphicon-map-marker feature" aria-hidden="true"></span>Feature Close By</li>
                   </ul>

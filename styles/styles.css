@@ -6,6 +6,10 @@
     font-family:  'Raleway', sans-serif;
   }
 
+  ul {
+    list-style: none;
+  }
+
 
 
 /* ----------------------------------
@@ -15,6 +19,26 @@
     margin-bottom: 0;
   }
 
+  .navbar-default{
+    background-color: #060A49;
+    color: #fff;
+    border-radius: 0px;
+    border: none;
+  }
+
+  .navbar-default .navbar-nav>li>a{
+    color: #fff;
+  }
+
+  .navbar-default .navbar-brand{
+    font-size: 25px;
+    color:#fff;
+  } 
+
+  .tagline{
+    font-size: 15px;
+    margin-left: 15px;
+  }
 
 
 /* ----------------------------------
@@ -48,9 +72,29 @@
     background-color:rgba(0,0,0,0.2);
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    
   }
-    .city {
+  
+  .btn-default:hover{
+    background-color: #fff;
+    color:#000;
+    border: none;
+  }
+
+  .btn-default:focus{
+    border: 1px solid #fff;
+    color:#fff;
+    background-color:rgba(0,0,0,0.2);
+  }
+
+  .btn-default:active:focus{
+    background-color: #fff;
+    color:#000;
+    border: none;
+  }
+
+
+
+  .city {
     font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 40px;
@@ -87,18 +131,18 @@
   }
 
   .panel-default>.panel-heading{
-    background-color: #0A138F;
+    background-color: #060A49;
     color: #fff;
   }
 
   .panel-heading{
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #0A138F;
+    background-color: #060A49;
     color: #fff;
   }
 
-  ul{
+  .panel-features{
     list-style: none;
     padding-left: 0px;
     padding-top: 10px;
@@ -129,7 +173,7 @@
   }
 
   .btn-price{
-    background-color: #0A138F;
+    background-color: #060A49;
     color: #fff;
     margin-top: 95px;
     font-size: 15px;
