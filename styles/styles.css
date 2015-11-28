@@ -48,9 +48,29 @@
     background-color:rgba(0,0,0,0.2);
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    
   }
-    .city {
+  
+  .btn-default:hover{
+    background-color: #fff;
+    color:#000;
+    border: none;
+  }
+
+  .btn-default:focus{
+    border: 1px solid #fff;
+    color:#fff;
+    background-color:rgba(0,0,0,0.2);
+  }
+
+  .btn-default:active:focus{
+    background-color: #fff;
+    color:#000;
+    border: none;
+  }
+
+  
+
+  .city {
     font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 40px;
