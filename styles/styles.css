@@ -142,3 +142,25 @@
     height:170px;
     width: 100%;
   }
+
+
+/* ----------------------------------
+    Modal
+-----------------------------------*/
+  .modal-top {
+    padding-bottom: 10px;
+  }
+
+  .modal-list{
+    font-size: 12px;
+  }
+
+  .modal-cost>.pernight{
+    margin-left: 426px;
+    margin-bottom: 0px;
+  }
+
+
+
+
+
