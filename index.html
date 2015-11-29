@@ -119,195 +119,303 @@
     </a>
   </div>
 
-<!-- Modal Shell -->
+<!-- NYC MODALS -->
+<!-- Park Central -->
+  <div class="modal fade" id="parkcentral" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Park Central New York</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-top">
+            <small>870 Seventh Ave, New York, NY 10019 888-734-8507</small>
+            <div class="rating pull-right">
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star-empty"></span>
+            </div>
+          </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Hotel Name</h4>
-      </div>
-      <div class="modal-body">
-        <div class="modal-top">
-          <small>Hotel Address and Number</small>
-          <div class="rating pull-right">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
+          <div class="row">
+            <div class="col-sm-6">
+              <img class="resultsImg thumbnail" src="images/hotel/th_parkcentral_nyc.jpg">
+            </div>  
+
+            <div class="col-sm-3">
+              <ul class="modal-list">
+                <li class="firstlist"><span class="glyphicon glyphicon-heart feature" aria-hidden="true"></span>Amenities</li>
+                <li>Free Wifi</li>
+                <li>Bar/Lounge</li>
+                <li>Valet Parking</li>
+                <li>Health Club</li>
+              </ul>
+            </div> 
+
+            <div class="col-sm-3">
+              <ul class="modal-list">
+                <li class="firstlist"><span class="glyphicon glyphicon-map-marker feature" aria-hidden="true"></span>Close By</li>
+                <li>In Midtown</li>
+                <li>Broadway</li>
+                <li>Rockefeller Center</li>
+                <li>Carnegie Hall</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="hotel-info">
+            <h4 class="hook">4-star hotel with bar/lounge, near Broadway</h4>
+              <p>Park Central New York offers a fantastic location, putting you just a 5-minute walk from Carnegie Hall and Ed Sullivan Theater. You can visit the 24-hour health club for a workout or unwind with a drink at the bar/lounge. A 24-hour fitness center and 3 coffee shops/cafés are other highlights, and rooms at this upscale hotel offer up nice touches like pillowtop beds with premium linens.</p>
+          </div>
+          <div class="modal-cost">
+            <p class="pernight">Nightly Cost:<span class="price">$300</span></p>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-sm-6">
-            <img class="resultsImg thumbnail" src="images/hotel/placeholder.jpg">
-          </div>  
-
-          <div class="col-sm-3">
-            <ul class="modal-list">
-              <li><span class="glyphicon glyphicon-heart feature" aria-hidden="true"></span>Feature Amenity</li>
-            </ul>
-          </div> 
-
-          <div class="col-sm-3">
-            <ul class="modal-list">
-              <li><span class="glyphicon glyphicon-map-marker feature" aria-hidden="true"></span>Feature Close By</li>
-            </ul>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+          <button type="button" class="btn btn-primary">Book This Hotel</button>
         </div>
-        
-        <div class="hotel-info">
-          <h4 class="hook">Hotel Hook</h4>
-            <p>Brunch sriracha locavore, try-hard raw denim gluten-free tote bag schlitz whatever 3 wolf moon authentic ugh. Meditation chartreuse gastropub four dollar toast. Truffaut direct trade fanny pack fixie deep v meh. Lumbersexual chartreuse biodiesel, pitchfork cronut quinoa distillery cred you probably haven't heard of them dreamcatcher. Echo park heirloom godard selvage hashtag. XOXO sustainable actually, chillwave drinking vinegar you probably haven't heard of them lomo try-hard four loko skateboard kale chips beard. Typewriter chia wayfarers portland</p>
-        </div>
-        <div class="modal-cost">
-          <p class="pernight">Nightly Cost:<span class="price">$300</span></p>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
-        <button type="button" class="btn btn-primary">Book This Hotel</button>
       </div>
     </div>
   </div>
-</div>
-  
-
-
-<!--Results Shell-->
-<div class="container-fluid results" data-amenities="" data-city="nyc">
-  <div class="container">
-    <div class="row-fluid">
-      
-      <div class="col-md-3"><!--Filter-->
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            Rating
-          </div>
-          <div class="panel-body">
-            <ul>
-              <li><input type="radio" name="starsFilter" class="starsFilter" value="1">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-              </li>
-              <li><input type="radio" name="starsFilter" class="starsFilter" value="2">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-              </li>
-              <li><input type="radio" name="starsFilter" class="starsFilter" value="3">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-               </li>
-              <li><input type="radio" name="starsFilter" class="starsFilter" value="4">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-              </li>
-              <li><input type="radio" name="starsFilter" class="starsFilter" value="5">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-              </li>
-            </ul>
-          </div>
+<!-- Wyndham Midtown -->
+  <div class="modal fade" id="wyndham" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Wyndham Midtown 45th</h4>
         </div>
-        
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            Price Range
-          </div>
-          <div class="panel-body">
-             <ul> 
-                <li><input type="radio" autocomplete="off"> Under $100</li>
-                <li><input type="radio" autocomplete="off"> $100 to $200</li>
-                <li><input type="radio" autocomplete="off"> Above $300</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            Must Haves
-          </div>
-          <div class="panel-body">
-            <ul>
-              <li><input type="checkbox" name="options" id="option1" autocomplete="off"> WiFi</li>
-              <li><input type="checkbox" name="options" id="option2" autocomplete="off"> Restaurant/Bar</li>
-              <li><input type="checkbox" name="options" id="option3" autocomplete="off"> Valet Parking</li>
-              <li><input type="checkbox" name="options" id="option4" autocomplete="off"> Fitness Center</li>
-              <li><input type="checkbox" name="options" id="option5" autocomplete="off"> Rooftop Terrace</li>
-              <li><input type="checkbox" name="options" id="option6" autocomplete="off"> Childcare</li>
-              <li><input type="checkbox" name="options" id="option7" autocomplete="off"> Spa Service</li>
-              <li><input type="checkbox" name="options" id="option8" autocomplete="off"> Pool</li>
-            </ul>
-          </div>
-        </div>
-     
-      </div>
-
-      <div class="col-md-9"><!--Results-->
-        <div class="row">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4>Hotel Name</h4>
+        <div class="modal-body">
+          <div class="modal-top">
+            <small>205 E 45th St, New York, NY, 10017. 888-724-6413</small>
+            <div class="rating pull-right">
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star-empty"></span>
             </div>
-            <div class="panel-body">
-              <div class="address">
-                <small>Hotel Address and Number</small>
-              </div>
-              <div class="row">
-                <div class="col-md-4"><!--Results/Img-->
-                  <img class="resultsImg thumbnail" src="images/hotel/placeholder.jpg">
-                </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <img class="resultsImg thumbnail" src="images/hotel/th_wyndham_nyc.jpg">
+            </div>  
+
+            <div class="col-sm-3">
+              <ul class="modal-list">
+                <li class="firstlist"><span class="glyphicon glyphicon-heart feature" aria-hidden="true"></span>Amenities</li>
+                <li>Free Wifi</li>
+                <li>Valet Parking</li>
+                <li>Rooftop Terrace</li>
+                <li>Childcare</li>
+              </ul>
+            </div> 
+
+            <div class="col-sm-3">
+              <ul class="modal-list">
+                <li><span class="glyphicon glyphicon-map-marker feature" aria-hidden="true"></span>Close By</li>
+                <li>In Midtown East</li>
+                <li>Chrysler Building </li>
+                <li>Grand Centrl</li>
+                <li>United Nations</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="hotel-info">
+            <h4 class="hook">Upscale condo with comfy bedding, near Chrysler Building</h4>
+              <p>Wyndham Midtown 45 at New York City features a rooftop terrace and puts you within a 10-minute walk of Chrysler Building and Grand Central Terminal. Guests can enjoy the 24-hour fitness center or take advantage of nearby hiking/biking trails. Condos at this upscale property offer up nice touches like deep soaking tubs, rainfall showerheads, and pillowtop beds with premium linens.</p>
+          </div>
+          <div class="modal-cost">
+            <p class="pernight">Nightly Cost:<span class="price">$144</span></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+          <button type="button" class="btn btn-primary">Book This Hotel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+          
+
+  <div class="container-fluid results" data-amenities="" data-city="nyc">
+    <div class="container">
+      <div class="row-fluid">
                 
-                <div class="col-md-5 stars"><!--Results/info/stars-->
-                 
-                  <span class="glyphicon glyphicon-star"></span>
-                  <span class="glyphicon glyphicon-star"></span>
-                  <span class="glyphicon glyphicon-star"></span>
-                  <span class="glyphicon glyphicon-star"></span>
-                  <span class="glyphicon glyphicon-star"></span>
+        <div class="col-md-3"><!--Filter-->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      Rating
+                    </div>
+                    <div class="panel-body">
+                      <ul>
+                        <li><input type="radio" name="starsFilter" class="starsFilter" value="1">
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                        </li>
+                        <li><input type="radio" name="starsFilter" class="starsFilter" value="2">
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                        </li>
+                        <li><input type="radio" name="starsFilter" class="starsFilter" value="3">
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                         </li>
+                        <li><input type="radio" name="starsFilter" class="starsFilter" value="4">
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star-empty"></span>
+                        </li>
+                        <li><input type="radio" name="starsFilter" class="starsFilter" value="5">
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      Price Range
+                    </div>
+                    <div class="panel-body">
+                       <ul> 
+                          <li><input type="radio" autocomplete="off"> Under $100</li>
+                          <li><input type="radio" autocomplete="off"> $100 to $200</li>
+                          <li><input type="radio" autocomplete="off"> Above $300</li>
+                      </ul>
+                    </div>
+                  </div>
 
-                  <ul class="panel-features">
-                    <li><span class="glyphicon glyphicon-heart feature" aria-hidden="true"></span>Feature Amenity</li>
-                    <li><span class="glyphicon glyphicon-map-marker feature" aria-hidden="true"></span>Feature Close By</li>
-                  </ul>
-
-                  <h4 class="hook">Hotel Hook</h4>
-                </div>
-
-                <div class="col-md-3"><!--Results/price-->
-                  <div class="cost pull-right">
-                  <p class="pernight">Nightly Cost:<span class="price">$300</span></p>
-                  <button class="btn btn-price pull-right" data-toggle="modal" data-target="#myModal">Continue</button>
-                </div>
-              </div> 
-
-            </div>
-          </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      Must Haves
+                    </div>
+                    <div class="panel-body">
+                      <ul>
+                        <li><input type="checkbox" name="options" id="option1" autocomplete="off"> WiFi</li>
+                        <li><input type="checkbox" name="options" id="option2" autocomplete="off"> Restaurant/Bar</li>
+                        <li><input type="checkbox" name="options" id="option3" autocomplete="off"> Valet Parking</li>
+                        <li><input type="checkbox" name="options" id="option4" autocomplete="off"> Fitness Center</li>
+                        <li><input type="checkbox" name="options" id="option5" autocomplete="off"> Rooftop Terrace</li>
+                        <li><input type="checkbox" name="options" id="option6" autocomplete="off"> Childcare</li>
+                        <li><input type="checkbox" name="options" id="option7" autocomplete="off"> Spa Service</li>
+                        <li><input type="checkbox" name="options" id="option8" autocomplete="off"> Pool</li>
+                      </ul>
+                    </div>
+                  </div>  
         </div>
-      </div>
 
-    </div>
-  </div>
-</div>
+        <div class="col-md-9"><!--Results-->
+          <div class="row">       
+<!-- NEW YORK CITY HOTELS -->
+           
+            <!-- Park Central -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4>Park Central New York</h4>
+              </div>
+              <div class="panel-body">
+                <div class="address">
+                  <small>870 Seventh Avenue, New Yorkm NY 10019. 888-734-8507</small>
+                </div>
+                <div class="row">
+                  <div class="col-md-4"><!--Results/Img-->
+                    <img class="resultsImg thumbnail" src="images/hotel/th_parkcentral_nyc.jpg">
+                  </div>
+                  
+                  <div class="col-md-5 stars"><!--Results/info/stars-->
+                   
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
 
+                    <ul class="panel-features">
+                      <li><span class="glyphicon glyphicon-heart feature" aria-hidden="true"></span>Free WiFi</li>
+                      <li><span class="glyphicon glyphicon-map-marker feature" aria-hidden="true"></span>In Midtown</li>
+                    </ul>
+
+                    <h4 class="hook">4-star hotel with bar/lounge, near Broadway</h4>
+                  </div>
+
+                  <div class="col-md-3"><!--Results/price-->
+                    <div class="cost pull-right">
+                    <p class="pernight">Nightly Cost:<span class="price">$300</span></p>
+                    <button class="btn btn-price pull-right" data-toggle="modal" data-target="#parkcentral">Continue</button>
+                  </div>
+                </div> 
+
+              </div>
+            </div>
+             <!-- Wyndham -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4>Wyndham Midtown 45</h4>
+              </div>
+              <div class="panel-body">
+                <div class="address">
+                  <small>205 E 45th St, New York, NY, 10017. 888-724-6413</small>
+                </div>
+                <div class="row">
+                  <div class="col-md-4"><!--Results/Img-->
+                    <img class="resultsImg thumbnail" src="images/hotel/th_wyndham_nyc.jpg">
+                  </div>
+                  
+                  <div class="col-md-5 stars"><!--Results/info/stars-->
+                   
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+
+                    <ul class="panel-features">
+                      <li><span class="glyphicon glyphicon-heart feature" aria-hidden="true"></span>Free Wifi</li>
+                      <li><span class="glyphicon glyphicon-map-marker feature" aria-hidden="true"></span>In Midtown East</li>
+                    </ul>
+
+                    <h4 class="hook">Upscale condo with comfy bedding, near Chrysler Building</h4>
+                  </div>
+
+                  <div class="col-md-3"><!--Results/price-->
+                    <div class="cost pull-right">
+                    <p class="pernight">Nightly Cost:<span class="price">$144</span></p>
+                    <button class="btn btn-price pull-right" data-toggle="modal" data-target="#wyndham">Continue</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- Ends col-9 Row -->
+        </div><!-- Ends col-9 -->
+      </div><!-- Ends row-fluid -->
+    </div><!-- Ends Container -->
+  </div><!-- End COntainer fluid -->
 
 
 

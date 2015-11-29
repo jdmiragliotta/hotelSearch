@@ -8,6 +8,7 @@
 
   ul {
     list-style: none;
+    padding-left: 0px;
   }
 
 
@@ -202,6 +203,12 @@
   .modal-cost>.pernight{
     margin-left: 426px;
     margin-bottom: 0px;
+  }
+
+  .firstlist{
+    font-weight: bold;
+    padding-bottom: 5px;
+    color: green;
   }
 
 
