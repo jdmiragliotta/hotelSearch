@@ -21,7 +21,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <div class="navbar-brand">Stay The Night<span class="tagline">Any City. Any Night.</span></div>
+        <div class="navbar-brand">Stay The Night<span class="tagline">Any City. Any Date.</span></div>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -183,43 +183,50 @@
     <div class="row-fluid">
       
       <div class="col-md-3"><!--Filter-->
-        <form>
-          <input type="radio" name="starsFilter" class="starsFilter" value="1">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <br>
-          <input type="radio" name="starsFilter" class="starsFilter" value="2">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <br>
-          <input type="radio" name="starsFilter" class="starsFilter" value="3">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <br>
-          <input type="radio" name="starsFilter" class="starsFilter" value="4">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <br>
-          <input type="radio" name="starsFilter" class="starsFilter" value="5">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <br>
-        </form>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Rating
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li><input type="radio" name="starsFilter" class="starsFilter" value="1">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+              </li>
+              <li><input type="radio" name="starsFilter" class="starsFilter" value="2">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+              </li>
+              <li><input type="radio" name="starsFilter" class="starsFilter" value="3">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+               </li>
+              <li><input type="radio" name="starsFilter" class="starsFilter" value="4">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+              </li>
+              <li><input type="radio" name="starsFilter" class="starsFilter" value="5">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
         
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -227,9 +234,9 @@
           </div>
           <div class="panel-body">
              <ul> 
-                <li><input type="checkbox" autocomplete="off"> Under $100</li>
-                <li><input type="checkbox" autocomplete="off"> $100 to $200</li>
-                <li><input type="checkbox" autocomplete="off"> Above $300</li>
+                <li><input type="radio" autocomplete="off"> Under $100</li>
+                <li><input type="radio" autocomplete="off"> $100 to $200</li>
+                <li><input type="radio" autocomplete="off"> Above $300</li>
             </ul>
           </div>
         </div>
@@ -240,14 +247,14 @@
           </div>
           <div class="panel-body">
             <ul>
-              <li><input type="radio" name="options" id="option1" autocomplete="off"> WiFi</li>
-              <li><input type="radio" name="options" id="option2" autocomplete="off"> Restaurant/Bar</li>
-              <li><input type="radio" name="options" id="option3" autocomplete="off"> Valet Parking</li>
-              <li><input type="radio" name="options" id="option4" autocomplete="off"> Fitness Center</li>
-              <li><input type="radio" name="options" id="option5" autocomplete="off"> Rooftop Terrace</li>
-              <li><input type="radio" name="options" id="option6" autocomplete="off"> Childcare</li>
-              <li><input type="radio" name="options" id="option7" autocomplete="off"> Spa Service</li>
-              <li><input type="radio" name="options" id="option8" autocomplete="off"> Pool</li>
+              <li><input type="checkbox" name="options" id="option1" autocomplete="off"> WiFi</li>
+              <li><input type="checkbox" name="options" id="option2" autocomplete="off"> Restaurant/Bar</li>
+              <li><input type="checkbox" name="options" id="option3" autocomplete="off"> Valet Parking</li>
+              <li><input type="checkbox" name="options" id="option4" autocomplete="off"> Fitness Center</li>
+              <li><input type="checkbox" name="options" id="option5" autocomplete="off"> Rooftop Terrace</li>
+              <li><input type="checkbox" name="options" id="option6" autocomplete="off"> Childcare</li>
+              <li><input type="checkbox" name="options" id="option7" autocomplete="off"> Spa Service</li>
+              <li><input type="checkbox" name="options" id="option8" autocomplete="off"> Pool</li>
             </ul>
           </div>
         </div>
