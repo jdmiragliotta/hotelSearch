@@ -27,7 +27,7 @@ $(document).ready(function(){
     $(".results").each(function(){
       if($(this).attr('data-city') === "nyc"){
         $(this).show()
-        $(this).prev().show()
+        $('body').find('.filter').show()
       }
     });
   });
@@ -81,18 +81,6 @@ $(document).ready(function(){
         parseInt(priceCheck)
         if( priceCheck < '100'){
           $(this).closest('.results').show()
-        }
-        else{
-          $(this).closest('.results').hide()
-        }        
-      });
-    }
-    if(numPrice === '200'){
-      $('.price').each(function(){
-        priceCheck = $(this).attr('data-price')
-        parseInt(priceCheck)
-        if(priceCheck > '100' && priceCheck < '200' ){
-          $(this).closest('.results').show()
           console.log('Test if')
         }
         else{
@@ -101,15 +89,27 @@ $(document).ready(function(){
         }        
       });
     }
+    if(numPrice === '200'){
+      $('.results').each(function(){
+        priceCheck = $(this).find('.price').attr('data-price')
+        parseInt(priceCheck)
+        if(priceCheck <= '100' || priceCheck >= '200' ){
+          $(this).hide()
+          debugger;
+        }      
+      });
+    }
     if(numPrice === '300'){
       $('.price').each(function(){
         priceCheck = $(this).attr('data-price')
         parseInt(priceCheck)
         if(priceCheck > '300'){
           $(this).closest('.results').show()
+          console.log('Test if')
         }
         else{
           $(this).closest('.results').hide()
+          console.log('Test else')
         }        
       });
     }
