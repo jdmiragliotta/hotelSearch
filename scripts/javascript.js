@@ -29,6 +29,9 @@ $(document).ready(function(){
         $(this).show()
         $('body').find('.filter').show()
       }
+      else{
+        $(this).hide()
+      }
     });
   });
   $("#chiButton").on('click',function(){
@@ -37,6 +40,9 @@ $(document).ready(function(){
         $(this).show()
         $('body').find('.filter').show()
       }
+      else{
+        $(this).hide()
+      }
     });
   });
   $("#laButton").on('click',function(){
@@ -44,7 +50,9 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "la"){
         $(this).show()
         $('body').find('.filter').show()
-
+      }
+      else{
+        $(this).hide()
       }
     });
   });
@@ -105,8 +113,55 @@ $(document).ready(function(){
           }    
       });
     }
-    
   });
 
+  $("input[type=checkbox]").on('click', function(){
+    var amenities = $(this).attr('id')
+    var id = amenitiesFilter(amenities);
+    var checkAmenities
+    var checkState = $(this).checked  
+    $('.results').each(function(){
+      checkAmenities = $(this).attr('data-amenities')
+      checkAmenities.split(" ");
+      for(i=0;i<checkAmenities.length;i++){
+        if(checkAmenities[i] == id){
+          if(checkState){
+            $(this).show()
+          }
+          if(!checkState){
+            $(this).hide()
+          }
+        }
+      }
+    });
+  })
 
+  function amenitiesFilter(filter){
+    switch(filter){
+      case 'option1' :
+        return 'wifi';
+      break;
+      case 'option2' :
+        return 'bar';
+      break;
+      case 'option3' :
+        return 'valet';
+      break;
+      case 'option4' :
+        return 'gym';
+      break;
+      case 'option5' :
+        return 'rooftop';
+      break;
+      case 'option6' :
+        return 'child';
+      break;
+      case 'option7' :
+        return 'spa';
+      break;
+      case 'option8' :
+        return 'pool';
+      break;
+    }
+  }
 });
