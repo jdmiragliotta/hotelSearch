@@ -11,7 +11,25 @@ $(document).ready(function(){
 //Submit
   $("#submit").on('click', function(){
     $(".results").each(function(){
+
+      $(this).attr('data-active', "")
+      if($("#search").val() === "nyc"){
+        $(this).show();
+        $(this).attr('data-active', "active")
+      }
+      if($("#search").val() === "chicago"){
+        $(this).show();
+        $(this).attr('data-active', "active")
+      }
+      if($("#search").val() === "la"){
+        $(this).show();
+        $(this).attr('data-active', "active")
+      }
+      $('body').find('.filter').show()
+      
+
       $(this).hide();
+
     });
     var searchVal = $("#search").val()
     if(searchVal == ""){
@@ -42,6 +60,7 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "nyc"){
         $(this).show()
         $('body').find('.filter').show()
+        $('body').find('.main-review').hide()
         $(this).attr('data-active', "active")
       }
       else{
@@ -55,6 +74,7 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "chicago"){
         $(this).show()
         $('body').find('.filter').show()
+        $('body').find('.main-review').hide()
         $(this).attr('data-active', "active")
       }
       else{
@@ -68,6 +88,7 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "la"){
         $(this).show()
         $('body').find('.filter').show()
+        $('body').find('.main-review').hide()
         $(this).attr('data-active', "active")
       }
       else{

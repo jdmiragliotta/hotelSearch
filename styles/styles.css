@@ -223,9 +223,6 @@
 /* ----------------------------------
     Reviews
 -----------------------------------*/
-  .main-review{
-    background-color: #d1d1d1;
-  }
 
   .review-heading {
     text-align: center;
@@ -245,9 +242,10 @@
   }
 
   .review {
-    padding-top: 10px;
+    padding-top: 50px;
     font-size: 18px;
     font-style: italic;
+    padding-right: 10px;
   }
 
    .review-hr {
@@ -263,6 +261,20 @@
     margin-bottom: 0px;
 }
 
+/* ----------------------------------
+    Footer
+-----------------------------------*/
+  footer {
+    height: 50px;
+    background-color: #060A49;
+    color: #fff;
+  }
+
+  footer>p {
+    padding-right: 20px;
+    font-size: 12px;
+    padding-top: 19px;
+  }
 
 
 
