@@ -205,9 +205,9 @@ $(document).ready(function(){
   });
 //Modal Hide
   $('.modalHide').on('click',function(){
-    var id = $(this).closest('.fade').attr('id')
-    id+= 'Result'
-    $('.results').each(function(){
+    var id = $(this).closest('.fade').attr('id')//Fade tag is on the top div with the id
+    id+= 'Result'//add Result to end of previous id.  All results have the same id+Result
+    $('.results').each(function(){//Look through results, hide matching id
       if(id === $(this).attr('id')){
         $(this).hide();
       }
