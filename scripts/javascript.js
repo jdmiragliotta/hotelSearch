@@ -139,23 +139,36 @@ $(document).ready(function(){
     var amenities = $(this).attr('id')
     var id = amenitiesFilter(amenities);
     var checkAmenities
-    var checkState = $(this).prop('checked')  
+    var idSplit
+    var loopCheck
+    var checkState = $(this).prop('checked')
+    $(".checkboxAmenities").each(function(){
+      if($(this).prop('checked')){
+      id+= " " + $(this).attr('id')
+      }
+
+    })
+    idSplit = id.split(" ")
     $('.results').each(function(){
       amenities = false;
       var splitString
       checkAmenities = $(this).attr('data-amenities')
       splitString = checkAmenities.split(" ");
-      for(i=0;i<splitString.length;i++){
-        if(splitString[i] === id && $(this).attr('data-active') == 'active'){
-          amenities = true;
+      for(i=0;i<idSplit.length;i++){
+        amenities = false;
+        for(j=0;j<splitString.length;j++){
+          if(splitString[j] === idSplit[i] && $(this).attr('data-active') == 'active'){
+            amenities = true
+          }
         }
-      }
-      if(amenities){
-        if(checkState){
-          $(this).show()
+        if(amenities){
+          loopCheck++
         }
+      };
+      if(loopCheck == idSplit.length){
+        $(this).show()
       }
-      if(!amenities){
+      else{
         $(this).hide()
       }
     });
