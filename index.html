@@ -171,7 +171,7 @@
               <p>Park Central New York offers a fantastic location, putting you just a 5-minute walk from Carnegie Hall and Ed Sullivan Theater. You can visit the 24-hour health club for a workout or unwind with a drink at the bar/lounge. A 24-hour fitness center and 3 coffee shops/cafés are other highlights, and rooms at this upscale hotel offer up nice touches like pillowtop beds with premium linens.</p>
           </div>
           <div class="modal-cost">
-            <p class="pernight">Nightly Cost:<span class="price">$300</span></p>
+            <p class="pernight">Nightly Cost:<span class="priceModal">$300</span></p>
           </div>
         </div>
         <div class="modal-footer">
@@ -233,7 +233,7 @@
               <p>Wyndham Midtown 45 at New York City features a rooftop terrace and puts you within a 10-minute walk of Chrysler Building and Grand Central Terminal. Guests can enjoy the 24-hour fitness center or take advantage of nearby hiking/biking trails. Condos at this upscale property offer up nice touches like deep soaking tubs, rainfall showerheads, and pillowtop beds with premium linens.</p>
           </div>
           <div class="modal-cost">
-            <p class="pernight">Nightly Cost:<span class="price">$144</span></p>
+            <p class="pernight">Nightly Cost:<span class="priceModal">$144</span></p>
           </div>
         </div>
         <div class="modal-footer">
@@ -247,11 +247,11 @@
 
           
 
-  <div class="container-fluid results" data-amenities="" data-city="nyc">
+  <div class="container-fluid">
     <div class="container">
       <div class="row-fluid">
                 
-        <div class="col-md-3"><!--Filter-->
+        <div class="col-md-3 filter"><!--Filter-->
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       Rating
@@ -303,9 +303,9 @@
                     </div>
                     <div class="panel-body">
                        <ul> 
-                          <li><input type="radio" autocomplete="off"> Under $100</li>
-                          <li><input type="radio" autocomplete="off"> $100 to $200</li>
-                          <li><input type="radio" autocomplete="off"> Above $300</li>
+                          <li><input type="radio" class='priceFilter' value='100' autocomplete="off"> Under $100</li>
+                          <li><input type="radio" class='priceFilter' value='200' autocomplete="off"> $100 to $200</li>
+                          <li><input type="radio" class='priceFilter' value='300' autocomplete="off"> Above $300</li>
                       </ul>
                     </div>
                   </div>
@@ -329,7 +329,7 @@
                   </div>  
         </div>
 
-        <div class="col-md-9"><!--Results-->
+        <div class="col-md-9 results" data-amenities="" data-city="nyc"><!--Results-->
           <div class="row">       
 <!-- NEW YORK CITY HOTELS -->
            
@@ -365,7 +365,7 @@
 
                   <div class="col-md-3"><!--Results/price-->
                     <div class="cost pull-right">
-                    <p class="pernight">Nightly Cost:<span class="price">$300</span></p>
+                    <p class="pernight">Nightly Cost:<span class="price" data-price='300'>$300</span></p>
                     <button class="btn btn-price pull-right" data-toggle="modal" data-target="#parkcentral">Continue</button>
                   </div>
                 </div> 
@@ -404,14 +404,15 @@
 
                   <div class="col-md-3"><!--Results/price-->
                     <div class="cost pull-right">
-                    <p class="pernight">Nightly Cost:<span class="price">$144</span></p>
+                    <p class="pernight">Nightly Cost:<span class="price" data-price='144'>$144</span></p>
                     <button class="btn btn-price pull-right" data-toggle="modal" data-target="#wyndham">Continue</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-          </div><!-- Ends col-9 Row -->
+            </div>
+            </div><!-- Ends col-9 Row -->
         </div><!-- Ends col-9 -->
       </div><!-- Ends row-fluid -->
     </div><!-- Ends Container -->
