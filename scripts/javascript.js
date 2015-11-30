@@ -26,7 +26,7 @@ $(document).ready(function(){
         $(this).attr('data-active', "active")
       }
       $('body').find('.filter').show()
-      
+      $('body').find('.main-review').hide()
 
       $(this).hide();
 
