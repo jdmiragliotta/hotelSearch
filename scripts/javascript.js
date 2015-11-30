@@ -8,29 +8,36 @@ $(document).ready(function(){
   });
 
 
-
+//Submit
   $("#submit").on('click', function(){
     $(".results").each(function(){
+      $(this).attr('data-active', "")
       if($("#search").val() === "nyc"){
         $(this).show();
+        $(this).attr('data-active', "active")
       }
       if($("#search").val() === "chicago"){
         $(this).show();
+        $(this).attr('data-active', "active")
       }
       if($("#search").val() === "la"){
         $(this).show();
+        $(this).attr('data-active', "active")
       }
+      $('body').find('.filter').show()
     });
   });
-
+//Carousel Buttons
   $("#nycButton").on('click',function(){
     $(".results").each(function(){
       if($(this).attr('data-city') === "nyc"){
         $(this).show()
         $('body').find('.filter').show()
+        $(this).attr('data-active', "active")
       }
       else{
         $(this).hide()
+        $(this).attr('data-active', "")
       }
     });
   });
@@ -39,9 +46,11 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "chicago"){
         $(this).show()
         $('body').find('.filter').show()
+        $(this).attr('data-active', "active")
       }
       else{
         $(this).hide()
+        $(this).attr('data-active', "")
       }
     });
   });
@@ -50,13 +59,15 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "la"){
         $(this).show()
         $('body').find('.filter').show()
+        $(this).attr('data-active', "active")
       }
       else{
         $(this).hide()
+        $(this).attr('data-active', "")
       }
     });
   });
-
+//Star Filter
   $(".starsFilter").on('click', function(){
     var numStars = $(this).attr('value');//Value of Radio Button
     var check = 0
@@ -73,7 +84,7 @@ $(document).ready(function(){
         if(check !== numStars){ //If they are not equal, hide the result
           $(this).hide();
         }
-        if(check === numStars){
+        if(check === numStars && $(this).attr('data-active') == 'active'){
           $(this).show();
         }
       });
@@ -82,7 +93,7 @@ $(document).ready(function(){
       }
     });
   });
-
+//Price Filter
   $(".priceFilter").on('click', function(){
     var numPrice = $(this).attr('value');
     var priceCheck = 0
@@ -90,7 +101,10 @@ $(document).ready(function(){
       $('.results').each(function(){
         priceCheck = $(this).find('.price').attr('data-price')
         parseInt(priceCheck)
-        if( priceCheck > '100'){
+        if(priceCheck < 100 && $(this).attr('data-active') == 'active' ){
+          $(this).show()
+        }
+        else{
           $(this).hide()
         }
       });
@@ -99,42 +113,53 @@ $(document).ready(function(){
       $('.results').each(function(){
         priceCheck = $(this).find('.price').attr('data-price')
         parseInt(priceCheck)
-        if(priceCheck <= '100' || priceCheck >= '200' ){
+        if(priceCheck > 100 && priceCheck < 300 && $(this).attr('data-active') == 'active' ){
+          $(this).show()
+        }   
+        else{
           $(this).hide()
-        }      
+        }   
       });
     }
     if(numPrice === '300'){
       $('.results').each(function(){
         priceCheck = $(this).find('.price').attr('data-price')
         parseInt(priceCheck)
-        if(priceCheck < '300'){
-          $(this).hide()  
-          }    
+        if(priceCheck >= 300 && $(this).attr('data-active') == 'active'){
+          $(this).show()  
+          }
+        else{
+          $(this).hide()
+        }    
       });
     }
   });
-
-  $("input[type=checkbox]").on('click', function(){
+//Amenities Filter
+  $(".checkboxAmenities").on('click', function(){
     var amenities = $(this).attr('id')
     var id = amenitiesFilter(amenities);
     var checkAmenities
-    var checkState = $(this).checked  
+    var checkState = $(this).prop('checked')  
     $('.results').each(function(){
+      amenities = false;
+      var splitString
       checkAmenities = $(this).attr('data-amenities')
-      checkAmenities.split(" ");
-      for(i=0;i<checkAmenities.length;i++){
-        if(checkAmenities[i] == id){
-          if(checkState){
-            $(this).show()
-          }
-          if(!checkState){
-            $(this).hide()
-          }
+      splitString = checkAmenities.split(" ");
+      for(i=0;i<splitString.length;i++){
+        if(splitString[i] === id && $(this).attr('data-active') == 'active'){
+          amenities = true;
         }
       }
+      if(amenities){
+        if(checkState){
+          $(this).show()
+        }
+      }
+      if(!amenities){
+        $(this).hide()
+      }
     });
-  })
+  });
 
   function amenitiesFilter(filter){
     switch(filter){
@@ -148,13 +173,13 @@ $(document).ready(function(){
         return 'valet';
       break;
       case 'option4' :
-        return 'gym';
+        return 'fitness';
       break;
       case 'option5' :
         return 'rooftop';
       break;
       case 'option6' :
-        return 'child';
+        return 'childcare';
       break;
       case 'option7' :
         return 'spa';
