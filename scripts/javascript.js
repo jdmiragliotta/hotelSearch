@@ -171,31 +171,30 @@ $(document).ready(function(){
     var idSplit = []
     var loopCheck = 0
     var checkState = $(this).prop('checked')
-    $(".checkboxAmenities").each(function(){
+    $(".checkboxAmenities").each(function(){//Finds all checked boxes
       if($(this).prop('checked')){
-      idSplit.push($(this).attr('id'))
+      idSplit.push($(this).attr('id'))//If box is checked, push id to an array
       }
 
     })
-    console.log(idSplit)
     $('.results').each(function(){
       amenities = false;
       loopCheck = 0
       var splitString
       checkAmenities = $(this).attr('data-amenities')
-      splitString = checkAmenities.split(" ");
-      for(i=0;i<idSplit.length;i++){
-        amenities = false;
-        for(j=0;j<splitString.length;j++){
-          if(splitString[j] === idSplit[i] && $(this).attr('data-active') == 'active'){
+      splitString = checkAmenities.split(" ");//Array of amenities from results
+      for(i=0;i<idSplit.length;i++){//Filter options seleceted
+        amenities = false;//Reset check 
+        for(j=0;j<splitString.length;j++){//Amenities List of Results
+          if(splitString[j] === idSplit[i] && $(this).attr('data-active') == 'active'){//If both are equal and the div is active, sets amenities to true
             amenities = true
           }
         }
-        if(amenities){
+        if(amenities){//If the ids matched, add one to loop count
           loopCheck++
         }
       };
-      if(loopCheck == idSplit.length){
+      if(loopCheck == idSplit.length){//if ever amenities selected come back true, show that div
         $(this).show()
       }
       else{
@@ -204,27 +203,28 @@ $(document).ready(function(){
 
     });
   });
-$('.modalHide').on('click',function(){
-  var id = $(this).closest('.fade').attr('id')
-  id+= 'Result'
-  $('.results').each(function(){
-    if(id === $(this).attr('id')){
-      $(this).hide();
-    }
+//Modal Hide
+  $('.modalHide').on('click',function(){
+    var id = $(this).closest('.fade').attr('id')
+    id+= 'Result'
+    $('.results').each(function(){
+      if(id === $(this).attr('id')){
+        $(this).hide();
+      }
+    })
   })
-})
-
-$(function() {
-  var availableTags = [
-    "nyc",
-    "new york city",
-    "chi",
-    "chicago",
-    "la",
-    "los angeles",
-  ];
-  $("#search").autocomplete({
-    source: availableTags
+//Autocomplete function
+  $(function() {
+    var availableTags = [
+      "nyc",
+      "new york city",
+      "chi",
+      "chicago",
+      "la",
+      "los angeles",
+    ];
+    $("#search").autocomplete({
+      source: availableTags
+    });
   });
-});
 });
