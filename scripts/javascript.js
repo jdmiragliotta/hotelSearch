@@ -51,14 +51,11 @@ $(document).ready(function(){
     var check = 0
     var count = 0
     $('.stars').children('span').each(function(){//going through phyphicon Spans
-        console.log(check)      
-        console.log(numStars)  
-        console.log(count)
       if($(this).hasClass('glyphicon-star')){
         check++;//If star, add 1
       }
-      count++
-      if(count === 5) {
+      count++//Count iterations
+      if(count === 5) {//Went through all glyphicons in a div
       $(".results").each(function(){
         check = parseInt(check);//Force both to ints
         numStars = parseInt(numStars);    
@@ -69,12 +66,55 @@ $(document).ready(function(){
           $(this).show();
         }
       });
-        count = 0;
-        check = 0;
+      count = 0;
+      check = 0;//Reset for next iteration
       }
     });
   });
 
+  $(".priceFilter").on('click', function(){
+    var numPrice = $(this).attr('value');
+    var priceCheck = 0
+    if(numPrice === '100'){
+      $('.price').each(function(){
+        priceCheck = $(this).attr('data-price')
+        parseInt(priceCheck)
+        if( priceCheck < '100'){
+          $(this).closest('.results').show()
+        }
+        else{
+          $(this).closest('.results').hide()
+        }        
+      });
+    }
+    if(numPrice === '200'){
+      $('.price').each(function(){
+        priceCheck = $(this).attr('data-price')
+        parseInt(priceCheck)
+        if(priceCheck > '100' && priceCheck < '200' ){
+          $(this).closest('.results').show()
+          console.log('Test if')
+        }
+        else{
+          $(this).closest('.results').hide()
+          console.log('Test else')
+        }        
+      });
+    }
+    if(numPrice === '300'){
+      $('.price').each(function(){
+        priceCheck = $(this).attr('data-price')
+        parseInt(priceCheck)
+        if(priceCheck > '300'){
+          $(this).closest('.results').show()
+        }
+        else{
+          $(this).closest('.results').hide()
+        }        
+      });
+    }
+    
+  });
 
 
 });
