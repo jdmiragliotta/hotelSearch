@@ -11,6 +11,7 @@ $(document).ready(function(){
 //Submit
   $("#submit").on('click', function(){
     $(".results").each(function(){
+
       $(this).attr('data-active', "")
       if($("#search").val() === "nyc"){
         $(this).show();
@@ -26,7 +27,32 @@ $(document).ready(function(){
       }
       $('body').find('.filter').show()
       
+
+      $(this).hide();
+
     });
+    var searchVal = $("#search").val()
+    if(searchVal == ""){
+      alert('Input Empty');
+    }
+    else{
+      $(".results").each(function(){
+        $(this).attr('data-active', "")
+        if((searchVal === 'nyc' || searchVal === 'new york city') && $(this).attr('data-city') === 'nyc'){
+          $(this).show();
+          $(this).attr('data-active', "active")
+        }
+        else if((searchVal === 'chi' || searchVal === 'chicago') && $(this).attr('data-city') === 'chicago'){
+          $(this).show();
+          $(this).attr('data-active', "active")
+        }
+        else if((searchVal === 'la' || searchVal === 'los angeles') && $(this).attr('data-city') === 'la'){
+          $(this).show();
+          $(this).attr('data-active', "active")
+        }
+        $('body').find('.filter').show()
+      });
+    }
   });
 //Carousel Buttons
   $("#nycButton").on('click',function(){
@@ -178,4 +204,27 @@ $(document).ready(function(){
 
     });
   });
+$('.modalHide').on('click',function(){
+  var id = $(this).closest('.fade').attr('id')
+  id+= 'Result'
+  $('.results').each(function(){
+    if(id === $(this).attr('id')){
+      $(this).hide();
+    }
+  })
+})
+
+$(function() {
+  var availableTags = [
+    "nyc",
+    "new york city",
+    "chi",
+    "chicago",
+    "la",
+    "los angeles",
+  ];
+  $("#search").autocomplete({
+    source: availableTags
+  });
+});
 });

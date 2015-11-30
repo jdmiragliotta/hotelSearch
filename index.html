@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Stay The Night</title>
+  <link rel="stylesheet" href="scripts/jquery-ui-1.11.4.custom/jquery-ui.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles/default.css">
   <link rel="stylesheet" type="text/css" href="styles/default.date.css">
@@ -30,11 +31,12 @@
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <input type="text" class="form-control" id="search"placeholder="Destination">
-            <input type="text" class="form-control datePicker" placeholder="Check In">
-            <input type="text" class="form-control datePicker" placeholder="Check Out">
+            <input id="datepickerStart" type="text" class="form-control datePicker" placeholder="Check In">
+            <input id="datepickerEnd" type="text" class="form-control datePicker" placeholder="Check Out">
           </div>
-          <button type="submit" class="btn btn-default" id="submit">Search</button>
+          <button type='button' class="btn btn-default" id="submit">Search</button>
         </form>
+
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Log In</a></li>
           <li><a href="#">Sign Up</a></li>
@@ -203,7 +205,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+          <button type="button" class="btn btn-default modalHide" data-dismiss="modal">Don't Show Again</button>
           <button type="button" class="btn btn-primary">Book This Hotel</button>
         </div>
       </div>
@@ -265,7 +267,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+          <button type="button" class="btn btn-default modalHide" data-dismiss="modal">Don't Show Again</button>
           <button type="button" class="btn btn-primary">Book This Hotel</button>
         </div>
       </div>
@@ -327,7 +329,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+          <button type="button" class="btn btn-default modalHide" data-dismiss="modal">Don't Show Again</button>
           <button type="button" class="btn btn-primary">Book This Hotel</button>
         </div>
       </div>
@@ -392,7 +394,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+          <button type="button" class="btn btn-default modalHide" data-dismiss="modal">Don't Show Again</button>
           <button type="button" class="btn btn-primary">Book This Hotel</button>
         </div>
       </div>
@@ -454,7 +456,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+          <button type="button" class="btn btn-default modalHide" data-dismiss="modal">Don't Show Again</button>
           <button type="button" class="btn btn-primary">Book This Hotel</button>
         </div>
       </div>
@@ -516,7 +518,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Keep Looking</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Show Again</button>
+          <button type="button" class="btn btn-default modalHide" data-dismiss="modal">Don't Show Again</button>
           <button type="button" class="btn btn-primary">Book This Hotel</button>
         </div>
       </div>
@@ -770,7 +772,7 @@
             <div class="panel-body">
                <ul> 
                   <li><input type="radio" name='priceFilter' class='priceFilter' value='100' autocomplete="off"> Under $100</li>
-                  <li><input type="radio" name='priceFilter' class='priceFilter' value='200' autocomplete="off"> $100 to $200</li>
+                  <li><input type="radio" name='priceFilter' class='priceFilter' value='200' autocomplete="off"> $100 to $300</li>
                   <li><input type="radio" name='priceFilter' class='priceFilter' value='300' autocomplete="off"> Above $300</li>
               </ul>
             </div>
@@ -802,7 +804,7 @@
 <!-- NEW YORK CITY HOTELS -->
            
             <!-- Park Central -->
-            <div class="panel panel-default results" data-amenities="wifi bar valet gym" data-city="nyc">
+            <div class="panel panel-default results" data-amenities="wifi bar valet fitness" data-city="nyc" id='parkcentralResult'>
               <div class="panel-heading">
                 <h4>Park Central New York</h4>
               </div>
@@ -841,7 +843,7 @@
               </div>
             </div>
              <!-- Wyndham -->
-            <div class="panel panel-default results" data-amenities="wifi valet rooftop childcare" data-city="nyc">
+            <div class="panel panel-default results" data-amenities="wifi valet rooftop childcare" data-city="nyc" id='wyndhamResult'>
               <div class="panel-heading">
                 <h4>Wyndham Midtown 45</h4>
               </div>
@@ -880,7 +882,7 @@
               </div>
             </div>
             <!-- Double Tree -->
-            <div class="panel panel-default results" data-amenities="wifi bar gym valet" data-city="nyc">
+            <div class="panel panel-default results" data-amenities="wifi bar fitness valet" data-city="nyc" id='doubletreeResult'>
               <div class="panel-heading">
                 <h4>Double Tree Suites by Hilton New York City – Times Square</h4>
               </div>
@@ -922,7 +924,8 @@
 <!-- CHICAGO HOTELS -->
            
             <!-- Millennium -->
-            <div class="panel panel-default results" data-amenities="wifi bar gym valet" data-city="chicago">
+            <div class="panel panel-default results" data-amenities="wifi bar fitness valet" data-city="chicago" id='millenniumResult'>
+
               <div class="panel-heading">
                 <h4>Millennium Knickbocker</h4>
               </div>
@@ -961,7 +964,8 @@
               </div>
             </div>
              <!-- Sheriton -->
-            <div class="panel panel-default results" data-amenities="wifi valet pool bar" data-city="chicago">
+            <div class="panel panel-default results" data-amenities="wifi valet pool valet" data-city="chicago" id='sheritonResult'>
+
               <div class="panel-heading">
                 <h4>Sheraton Grand Chicago</h4>
               </div>
@@ -1000,7 +1004,7 @@
               </div>
             </div>
             <!-- Mile North -->
-            <div class="panel panel-default results" data-amenities="wifi bar rooftop valet" data-city="chicago">
+            <div class="panel panel-default results" data-amenities="wifi bar rooftop valet" data-city="chicago" id='milenorthResult'>
               <div class="panel-heading">
                 <h4>Mile North</h4>
               </div>
@@ -1042,7 +1046,7 @@
 <!-- LA HOTELS -->
            
             <!-- Sportsman's Lodge -->
-            <div class="panel panel-default results" data-amenities="wifi bar park valet" data-city="la">
+            <div class="panel panel-default results" data-amenities="wifi bar park valet" data-city="la" id='sportmensResult'>
               <div class="panel-heading">
                 <h4>Sportsmen's Lodge</h4>
               </div>
@@ -1081,7 +1085,7 @@
               </div>
             </div>
              <!-- Holiday -->
-            <div class="panel panel-default results" data-amenities="wifi rooftop gym breakfast" data-city="la">
+            <div class="panel panel-default results" data-amenities="wifi rooftop gym breakfast" data-city="la" id='holidayResult'>
               <div class="panel-heading">
                 <h4>Holiday Inn Express West Los Angeles</h4>
               </div>
@@ -1120,7 +1124,7 @@
               </div>
             </div>
             <!-- Hyatt -->
-            <div class="panel panel-default results" data-amenities="wifi spa pool gym" data-city="la">
+            <div class="panel panel-default results" data-amenities="wifi spa pool gym" data-city="la" id='hyattResult'>
               <div class="panel-heading">
                 <h4>Hyatt Regency Century Plaza</h4>
               </div>
@@ -1193,6 +1197,7 @@
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
   <script src="scripts/picker.js" type="text/javascript"></script>
   <script src="scripts/picker.date.js" type="text/javascript"></script>
   <script src="scripts/picker.time.js" type="text/javascript"></script>
