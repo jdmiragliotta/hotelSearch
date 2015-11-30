@@ -136,21 +136,21 @@ $(document).ready(function(){
   });
 //Amenities Filter
   $(".checkboxAmenities").on('click', function(){
-    var amenities = $(this).attr('id')
-    var id = amenitiesFilter(amenities);
+    var amenities 
     var checkAmenities
-    var idSplit
-    var loopCheck
+    var idSplit = []
+    var loopCheck = 0
     var checkState = $(this).prop('checked')
     $(".checkboxAmenities").each(function(){
       if($(this).prop('checked')){
-      id+= " " + $(this).attr('id')
+      idSplit.push($(this).attr('id'))
       }
 
     })
-    idSplit = id.split(" ")
+    console.log(idSplit)
     $('.results').each(function(){
       amenities = false;
+      loopCheck = 0
       var splitString
       checkAmenities = $(this).attr('data-amenities')
       splitString = checkAmenities.split(" ");
@@ -171,35 +171,7 @@ $(document).ready(function(){
       else{
         $(this).hide()
       }
+
     });
   });
-
-  function amenitiesFilter(filter){
-    switch(filter){
-      case 'option1' :
-        return 'wifi';
-      break;
-      case 'option2' :
-        return 'bar';
-      break;
-      case 'option3' :
-        return 'valet';
-      break;
-      case 'option4' :
-        return 'fitness';
-      break;
-      case 'option5' :
-        return 'rooftop';
-      break;
-      case 'option6' :
-        return 'childcare';
-      break;
-      case 'option7' :
-        return 'spa';
-      break;
-      case 'option8' :
-        return 'pool';
-      break;
-    }
-  }
 });
