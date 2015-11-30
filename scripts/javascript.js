@@ -76,17 +76,12 @@ $(document).ready(function(){
     var numPrice = $(this).attr('value');
     var priceCheck = 0
     if(numPrice === '100'){
-      $('.price').each(function(){
-        priceCheck = $(this).attr('data-price')
+      $('.results').each(function(){
+        priceCheck = $(this).find('.price').attr('data-price')
         parseInt(priceCheck)
-        if( priceCheck < '100'){
-          $(this).closest('.results').show()
-          console.log('Test if')
+        if( priceCheck > '100'){
+          $(this).hide()
         }
-        else{
-          $(this).closest('.results').hide()
-          console.log('Test else')
-        }        
       });
     }
     if(numPrice === '200'){
@@ -95,22 +90,16 @@ $(document).ready(function(){
         parseInt(priceCheck)
         if(priceCheck <= '100' || priceCheck >= '200' ){
           $(this).hide()
-          debugger;
         }      
       });
     }
     if(numPrice === '300'){
-      $('.price').each(function(){
-        priceCheck = $(this).attr('data-price')
+      $('.results').each(function(){
+        priceCheck = $(this).find('.price').attr('data-price')
         parseInt(priceCheck)
-        if(priceCheck > '300'){
-          $(this).closest('.results').show()
-          console.log('Test if')
-        }
-        else{
-          $(this).closest('.results').hide()
-          console.log('Test else')
-        }        
+        if(priceCheck < '300'){
+          $(this).hide()  
+          }    
       });
     }
     
