@@ -219,6 +219,28 @@
   }
 
 
+/* ----------------------------------
+    Reviews
+-----------------------------------*/
+
+  .review-heading {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #060A49;
+  }
+
+  .review-img {
+    border-radius: 150px;
+  
+  }
+
+  .review-image{
+    padding-left: 150px;
+    display: inline;
+  }
+
 
 
 
