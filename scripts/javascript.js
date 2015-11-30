@@ -11,16 +11,20 @@ $(document).ready(function(){
 //Submit
   $("#submit").on('click', function(){
     $(".results").each(function(){
+      $(this).hide();
+    });
+    var searchVal = $("#search").val()
+    $(".results").each(function(){
       $(this).attr('data-active', "")
-      if($("#search").val() === "nyc"){
+      if((searchVal === 'nyc' || searchVal === 'new york city') && $(this).attr('data-city') === 'nyc'){
         $(this).show();
         $(this).attr('data-active', "active")
       }
-      if($("#search").val() === "chicago"){
+      else if((searchVal === 'chi' || searchVal === 'chicago') && $(this).attr('data-city') === 'chicago'){
         $(this).show();
         $(this).attr('data-active', "active")
       }
-      if($("#search").val() === "la"){
+      else if((searchVal === 'la' || searchVal === 'los angeles') && $(this).attr('data-city') === 'la'){
         $(this).show();
         $(this).attr('data-active', "active")
       }
@@ -174,4 +178,27 @@ $(document).ready(function(){
 
     });
   });
+$('.modalHide').on('click',function(){
+  var id = $(this).closest('.fade').attr('id')
+  id+= 'Result'
+  $('.results').each(function(){
+    if(id === $(this).attr('id')){
+      $(this).hide();
+    }
+  })
+})
+
+$(function() {
+  var availableTags = [
+    "nyc",
+    "new york city",
+    "chi",
+    "chicago",
+    "la",
+    "los angeles",
+  ];
+  $("#search").autocomplete({
+    source: availableTags
+  });
+});
 });
