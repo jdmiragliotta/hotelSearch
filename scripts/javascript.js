@@ -25,6 +25,7 @@ $(document).ready(function(){
         $(this).attr('data-active', "active")
       }
       $('body').find('.filter').show()
+      
     });
   });
 //Carousel Buttons
@@ -33,6 +34,7 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "nyc"){
         $(this).show()
         $('body').find('.filter').show()
+        $('body').find('.main-review').hide()
         $(this).attr('data-active', "active")
       }
       else{
@@ -46,6 +48,7 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "chicago"){
         $(this).show()
         $('body').find('.filter').show()
+        $('body').find('.main-review').hide()
         $(this).attr('data-active', "active")
       }
       else{
@@ -59,6 +62,7 @@ $(document).ready(function(){
       if($(this).attr('data-city') === "la"){
         $(this).show()
         $('body').find('.filter').show()
+        $('body').find('.main-review').hide()
         $(this).attr('data-active', "active")
       }
       else{
