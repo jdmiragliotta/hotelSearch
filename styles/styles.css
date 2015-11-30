@@ -4,6 +4,7 @@
 -----------------------------------*/
   body{
     font-family:  'Raleway', sans-serif;
+    background-color: #d1d1d1;
   }
 
   ul {
@@ -112,7 +113,7 @@
     padding-top: 15px
   }
 
- hr {
+ .carousel-hr {
     border: 0;
     height: 1px;
     width: 300px;
@@ -222,24 +223,45 @@
 /* ----------------------------------
     Reviews
 -----------------------------------*/
+  .main-review{
+    background-color: #d1d1d1;
+  }
 
   .review-heading {
-    padding-left: 20px;
-    padding-top: 20px;
-    font-size: 20px;
+    text-align: center;
+  
     font-weight: bold;
     color: #060A49;
   }
 
   .review-img {
     border-radius: 150px;
-  
+
   }
 
   .review-image{
-    padding-left: 150px;
-    display: inline;
+    padding-left: 30px;
+    padding-top: 20px;
   }
+
+  .review {
+    padding-top: 10px;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+   .review-hr {
+    border: 0;
+    height: 1px;
+    width: 300px;
+    background: #060A49;
+    background: -moz-linear-gradient(left, rgba(30,87,153,0.01) 0%, rgba(6,10,73,0.56) 28%, rgba(6,10,73,0.98) 49%, rgba(6,10,73,1) 50%, rgba(6,10,73,0.62) 69%, rgba(125,185,232,0.01) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(30,87,153,0.01) 0%,rgba(6,10,73,0.56) 28%,rgba(6,10,73,0.98) 49%,rgba(6,10,73,1) 50%,rgba(6,10,73,0.62) 69%,rgba(125,185,232,0.01) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(30,87,153,0.01) 0%,rgba(6,10,73,0.56) 28%,rgba(6,10,73,0.98) 49%,rgba(6,10,73,1) 50%,rgba(6,10,73,0.62) 69%,rgba(125,185,232,0.01) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031e5799', endColorstr='#037db9e8',GradientType=1 ); /* IE6-9 */
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
 
 
 
