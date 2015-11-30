@@ -14,22 +14,27 @@ $(document).ready(function(){
       $(this).hide();
     });
     var searchVal = $("#search").val()
-    $(".results").each(function(){
-      $(this).attr('data-active', "")
-      if((searchVal === 'nyc' || searchVal === 'new york city') && $(this).attr('data-city') === 'nyc'){
-        $(this).show();
-        $(this).attr('data-active', "active")
-      }
-      else if((searchVal === 'chi' || searchVal === 'chicago') && $(this).attr('data-city') === 'chicago'){
-        $(this).show();
-        $(this).attr('data-active', "active")
-      }
-      else if((searchVal === 'la' || searchVal === 'los angeles') && $(this).attr('data-city') === 'la'){
-        $(this).show();
-        $(this).attr('data-active', "active")
-      }
-      $('body').find('.filter').show()
-    });
+    if(searchVal == ""){
+      alert('Input Empty');
+    }
+    else{
+      $(".results").each(function(){
+        $(this).attr('data-active', "")
+        if((searchVal === 'nyc' || searchVal === 'new york city') && $(this).attr('data-city') === 'nyc'){
+          $(this).show();
+          $(this).attr('data-active', "active")
+        }
+        else if((searchVal === 'chi' || searchVal === 'chicago') && $(this).attr('data-city') === 'chicago'){
+          $(this).show();
+          $(this).attr('data-active', "active")
+        }
+        else if((searchVal === 'la' || searchVal === 'los angeles') && $(this).attr('data-city') === 'la'){
+          $(this).show();
+          $(this).attr('data-active', "active")
+        }
+        $('body').find('.filter').show()
+      });
+    }
   });
 //Carousel Buttons
   $("#nycButton").on('click',function(){
