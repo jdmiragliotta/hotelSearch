@@ -136,57 +136,42 @@ $(document).ready(function(){
   });
 //Amenities Filter
   $(".checkboxAmenities").on('click', function(){
-    var amenities = $(this).attr('id')
-    var id = amenitiesFilter(amenities);
+    var amenities 
     var checkAmenities
-    var checkState = $(this).prop('checked')  
+    var idSplit = []
+    var loopCheck = 0
+    var checkState = $(this).prop('checked')
+    $(".checkboxAmenities").each(function(){
+      if($(this).prop('checked')){
+      idSplit.push($(this).attr('id'))
+      }
+
+    })
+    console.log(idSplit)
     $('.results').each(function(){
       amenities = false;
+      loopCheck = 0
       var splitString
       checkAmenities = $(this).attr('data-amenities')
       splitString = checkAmenities.split(" ");
-      for(i=0;i<splitString.length;i++){
-        if(splitString[i] === id && $(this).attr('data-active') == 'active'){
-          amenities = true;
+      for(i=0;i<idSplit.length;i++){
+        amenities = false;
+        for(j=0;j<splitString.length;j++){
+          if(splitString[j] === idSplit[i] && $(this).attr('data-active') == 'active'){
+            amenities = true
+          }
         }
-      }
-      if(amenities){
-        if(checkState){
-          $(this).show()
+        if(amenities){
+          loopCheck++
         }
+      };
+      if(loopCheck == idSplit.length){
+        $(this).show()
       }
-      if(!amenities){
+      else{
         $(this).hide()
       }
+
     });
   });
-
-  function amenitiesFilter(filter){
-    switch(filter){
-      case 'option1' :
-        return 'wifi';
-      break;
-      case 'option2' :
-        return 'bar';
-      break;
-      case 'option3' :
-        return 'valet';
-      break;
-      case 'option4' :
-        return 'fitness';
-      break;
-      case 'option5' :
-        return 'rooftop';
-      break;
-      case 'option6' :
-        return 'childcare';
-      break;
-      case 'option7' :
-        return 'spa';
-      break;
-      case 'option8' :
-        return 'pool';
-      break;
-    }
-  }
 });
