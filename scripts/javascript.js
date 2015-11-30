@@ -38,6 +38,7 @@ $(document).ready(function(){
     $(".results").each(function(){
       if($(this).attr('data-city') === "chicago"){
         $(this).show()
+        $('body').find('.filter').show()
       }
       else{
         $(this).hide()
@@ -48,6 +49,7 @@ $(document).ready(function(){
     $(".results").each(function(){
       if($(this).attr('data-city') === "la"){
         $(this).show()
+        $('body').find('.filter').show()
       }
       else{
         $(this).hide()
