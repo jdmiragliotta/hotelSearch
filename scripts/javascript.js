@@ -33,7 +33,7 @@ $(document).ready(function(){
     });
     var searchVal = $("#search").val()
     if(searchVal == ""){
-      alert('Input Empty');
+      alert('Please fill in the blank fields');
     }
     else{
       $(".results").each(function(){
